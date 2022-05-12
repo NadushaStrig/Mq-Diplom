@@ -123,18 +123,17 @@
 .trends {
   display: flex;
   margin-top: 25px;
-  justify-content: space-between;
 }
 
 
 
 .trend {
   background-repeat: no-repeat;
-  width: 414px;
+  width: 100%;
   background-color: #eff6f1;
   align-items: flex-end;
   display: flex;
-  margin-right: 5px;
+  
   background-size: cover;
   background-position: center;
   padding-top: 135px;
@@ -157,15 +156,18 @@
 
 .first-trend {
   background-image: url(trend1.jpg);
+  margin-right: 5px;
 
 }
 
 .second-trend {
   background-image: url(trend2.jpg);
+  margin-right: 5px;
 }
 
 .third-trend { 
   background-image: url(trend3.jpg);
+  margin-right: 5px;
 }
 
 .forth-trend {
@@ -293,7 +295,7 @@
 }
 
 .aside {
-  max-width: 273px;
+  width: 273px;
 }
 
 .latest-posts-title {
@@ -616,22 +618,26 @@
 .product {
   display: flex;
   flex-direction: column;
+  
 }
+
 
 
 .product-pic {
-  max-width: 300px;
+  width: 100%;
+  padding: 0 20px;
+  display: block;
+  
 }
 
 .product-img {
-  max-width: 300px;
-  background-size: cover;
+  display: block;
   background-color: #eff6f1;
-  margin: 0 20px;
+  width: 100%;
 }
 
 .product-content {
-  max-width: 340px;
+  width: 340px;
   background-color: rgba(0,0,0,0);
   outline: 3px solid #b59f5b;
   margin-top: -38px;
@@ -644,7 +650,7 @@
   font-size: 20px;
   color: #0f0d0e;
   font-weight: 700;
-  font-family: opeb-sans;
+  font-family: open-sans;
   text-transform: uppercase;
   padding-top: 30px;
 }
@@ -654,7 +660,7 @@
   font-size: 20px;
   color: #0f0d0e;
   font-weight: 700;
-  font-family: opeb-sans;
+  font-family: open-sans;
   text-transform: uppercase;
 }
 
@@ -1032,7 +1038,7 @@
 }
   
 .menu-burger:before {
-    top: 0;
+  top: 0;
 }
   
 .menu-burger:before, .menu-burger:after {
@@ -1079,12 +1085,27 @@
 
 .trend {
   height: 247px; 
-  margin-right: 0;
-  width: calc(50% - 3px);
+
+}
+.first-trend,
+.third-trend {
+  width: calc(50% - 5px);
+}
+
+.second-trend,
+.forth-trend {
+  width: 50%;
+  margin-right: 0px;
 }
 
 .content {
   margin: 40px 0;
+}
+
+.posts {
+  margin-right: 30px;
+  width: 100%;
+  margin-left: 30px;
 }
 
 .post {
@@ -1093,24 +1114,25 @@
 }
 
 .post:nth-child(2n+3) {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 .post:nth-child(even) {
-  margin: 40px auto 0;
+  margin-top: 40px;
+  margin-bottom: 0px;
 }
 .post-pic {
-  margin-left: 30px;
-  width: 392px;
+  width: 100%;
 }
 
 .posts-img {
-  width: 392px;
+  width: 100%;
 }
 
 .post-text {
   margin-top: 10px;
-  width: 392px;
+  width: 100%;
+  margin-left: 0px;
 }
 
 .posts-name,
@@ -1130,7 +1152,7 @@
 }
 
 .posts-text:after {
-  width: 392px;
+  width: 100%;
   height: 3px;
   background-color: #eeeeee;
   content: "";
@@ -1150,9 +1172,6 @@
  font-size: 18px;
 }
   
-.shop {
-  margin: 0 30px;
-}
 
 .products {
   display: flex;
@@ -1160,16 +1179,27 @@
   margin: 30px 0 15px;
 } 
 
-.product {
-  margin-bottom: 25px; 
+.product:nth-child(odd) {
+  margin: 0px 25px 25px 30px;
+  width: calc(50% - 55px); 
 }
 
-.product:nth-child(3) {
-  margin-bottom: 0;
+.product:nth-child(even) {
+  margin: 0px 30px 25px 25px;
+  width: calc(50% - 55px);
 }
 
 .product-pic {
-  max-width: 292px;
+  width: 100%;
+}
+
+.product-img {
+  max-width: 100%;
+  object-fit: fill;
+}
+
+.product-content {
+  width: 100%;
 }
 
 .footer {
@@ -1290,11 +1320,10 @@
 
 .trend {
   height: 247px; 
-  margin-right: 0;
 }
 
 .trend {
-  width: calc(25% - 3px);
+  width: 25%;
 }
 
 .trend-text {
@@ -1306,9 +1335,15 @@
   margin: 40px 0;
 }
 
+.posts {
+  margin-right: 30px;
+  width: 100%;
+  margin-left: 30px;
+}
+
 .post {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
 }
 
 .post:nth-child(2n+3) {
@@ -1316,20 +1351,20 @@
 }
 
 .post:nth-child(even) {
-  margin: 40px auto 0;
+  margin-top: 40px;
 }
 .post-pic {
-  margin-left: 30px;
-  width: 392px;
+  width: 100%;
 }
 
 .posts-img {
-  width: 392px;
+  width: 100%;
 }
 
 .post-text {
   margin-top: 10px;
-  width: 392px;
+  width: 100%;
+  margin-left: 0px;
 }
 
 .posts-name,
@@ -1350,7 +1385,7 @@
 }
 
 .posts-text:after {
-  width: 392px;
+  width: 100%;
   height: 3px;
   background-color: #eeeeee;
   content: "";
@@ -1370,22 +1405,33 @@
  font-size: 18px;
 }
   
-.shop {
-  margin: 0 30px;
-}
-
 .products {
   display: flex;
   flex-wrap: wrap;
   margin: 30px 0 15px;
 } 
 
-.product {
-  margin-bottom: 25px; 
+.product:nth-child(odd) {
+  margin: 0px 25px 25px 30px;
+  width: calc(50% - 55px); 
+}
+
+.product:nth-child(even) {
+  margin: 0px 30px 25px 25px;
+  width: calc(50% - 55px);
 }
 
 .product-pic {
-  max-width: 292px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.product-img {
+  
+}
+
+.product-content {
+  width: 100%;
 }
 
 .footer {
@@ -1515,6 +1561,7 @@
 .trend-text {
   margin: 0 15px 15px;
   padding: 30px 20px;
+  width: 100%;
 }
 
 .trend-title {
@@ -1575,7 +1622,7 @@
 }
 
 .posts-text:after {
-  width: 330px;
+  width: 100%;
   height: 3px;
   background-color: #eeeeee;
   content: "";
@@ -1588,19 +1635,23 @@
 
 .aside {
   margin-top: 40px;
-  max-width: 330px;
+  width: 100%;
 }
 
 .latest-posts-title {
-  font-size: 1rem;
+  font-size: 16px;
+}
+
+.search {
+  width: 100%;
 }
 
 .field-search {
-  width: 282px;
+  width: 100%;
 }
 
 .field-email {
-  width: 330px;
+  width: 100%;
 }
 
 .subscribe {
@@ -1608,11 +1659,11 @@
 }
 
 .subscribe-title {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .subscribe-button {
-  width: 330px;
+  width: 100%;
 }
 
 .tags {
@@ -1668,7 +1719,9 @@
   font-size: 17px;
 }
 
-.product-title {
+
+.product-content {
+  width: 100%;
 }
 
 .footer {
@@ -1879,7 +1932,7 @@
 }
 
 .posts-text:after {
-  width: 330px;
+  width: 100%;
   height: 3px;
   background-color: #eeeeee;
   content: "";
@@ -1892,19 +1945,25 @@
 
 .aside {
   margin-top: 40px;
-  max-width: 330px;
+  width: 100%;
 }
 
 .latest-posts-title {
   font-size: 16px;
 }
 
-.field-search {
-  width: 282px;
+.search {
+  width: 100%;
 }
 
+.field-search {
+  width: 100%;
+}
+
+
+
 .field-email {
-  width: 330px;
+  width: 100%;
 }
 
 .subscribe {
@@ -1916,7 +1975,7 @@
 }
 
 .subscribe-button {
-  width: 330px;
+  width: 100%;
 }
 
 .tags {
@@ -1960,6 +2019,7 @@
 
 .products {
   flex-direction: column;
+  width: 100%;
 }
 
 .product:nth-child(1n+2) {
@@ -1972,7 +2032,8 @@
   font-size: 17px;
 }
 
-.product-title {
+.product-content {
+  width: 100%;
 }
 
 .footer {
